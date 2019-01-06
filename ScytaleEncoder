@@ -1,7 +1,6 @@
 from string import ascii_lowercase
 key = 6
 string = "helloworld"
-spaces = [i for i,x in enumerate(string) if x == ' ']
 string = string.replace(" ", "").lower()
 ciphered = ""
 z = 0
@@ -14,6 +13,4 @@ for i in range(x): string = string + "_"
 for i in range(key):
     ciphered = ciphered + string[z::key]
     z += 1
-for space in spaces:
-    ciphered = ciphered[:space] + ' ' + ciphered[space:]
 print(ciphered)
